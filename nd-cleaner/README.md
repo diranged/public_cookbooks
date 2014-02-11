@@ -8,7 +8,8 @@ includes files/packages that you have installed to any non-root storage.
 
 # Requirements
 
-[nd-puppet](https://github.com/nextdoor/public_cookbooks)
+ * Cookbook: [nd-puppet](https://github.com/nextdoor/public_cookbooks)
+ * Cookbook: [rightscale](https://github.com/rightscale/rightscale_cookbooks/tree/master/cookbooks/rightscale)
 
 # Usage
 

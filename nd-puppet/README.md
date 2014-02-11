@@ -10,6 +10,8 @@ a configured number of times looking for a safe (0) exit code.
 Requires a virtual machine from a RightScale managed RightImage.
 Puppet is installed and configured under the root user for a host.
 
+ * Cookbook: [rightscale](https://github.com/rightscale/rightscale_cookbooks/tree/master/cookbooks/rightscale)
+
 # Usage
 
 Usage of this recipe requires that you have a Puppet Policy-based autosigning
@@ -27,7 +29,7 @@ attributes which have inputs can be found in the metadata.rb file.
 
 ## Puppet installation attributes
 
-* `node[:'nd-puppet'][:default]:version]` - The Puppet version to install.
+* `node[:'nd-puppet'][:default][:version]` - The Puppet version to install.
 
 ## Puppet configuration attributes
 
