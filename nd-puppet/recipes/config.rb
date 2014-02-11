@@ -29,7 +29,7 @@ template "/etc/facter/facts.d/nd-puppet.txt" do
   mode   0644
   variables(
     :puppet_node        => node[:'nd-puppet'][:config][:puppet_node],
-    :puppet_environment => node[:'nd-puppet'][:config][:puppet_environment],
+    :puppet_environment => node[:'nd-puppet'][:config][:environment],
     :facts              => node[:'nd-puppet'][:config][:facts]
   )
 end
