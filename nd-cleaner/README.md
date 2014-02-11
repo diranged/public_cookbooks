@@ -2,7 +2,7 @@
 
 Source: [https://github.com/nextdoor/public_cookbooks](https://github.com/nextdoor/public_cookbooks).
 
-This cookbook cleans a system in preparation for imaging. The gaol is
+This cookbook cleans a system in preparation for imaging. The goal is
 to wipe out anything that should not be imaged. Generally speaking this
 includes files/packages that you have installed to any non-root storage.
 
