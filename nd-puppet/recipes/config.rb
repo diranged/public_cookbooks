@@ -28,8 +28,9 @@ template "/etc/facter/facts.d/nd-puppet.txt" do
   group  "root"
   mode   0644
   variables(
-    :puppet_node => node[:'nd-puppet'][:config][:puppet_node],
-    :facts       => node[:'nd-puppet'][:config][:facts]
+    :puppet_node        => node[:'nd-puppet'][:config][:puppet_node],
+    :puppet_environment => node[:'nd-puppet'][:config][:puppet_environment],
+    :facts              => node[:'nd-puppet'][:config][:facts]
   )
 end
 

@@ -43,6 +43,27 @@ attributes which have inputs can be found in the metadata.rb file.
 * `node[:'nd-puppet'][:config][:challenge_password]` - Optional string passed to the
   puppet master as a CSR Attribute named challengePassword.
 
+# Puppet Facts
+
+This cookbook creates a */etc/facter/facts.d/nd-puppet.txt* fact file which
+takes advantage of [Facters 1.7 release](http://puppetlabs.com/blog/facter-1-7-introduces-external-facts)
+to create custom facts that can be used by your Puppet Master during
+compilation of the puppet manifest. The `nd-puppet::config` recipe writes
+this file with a hard-set of Puppet facts (listed below) as well as any custom
+facts passed into the `node[:'nd-puppet'][:config][:facts]` server input.
+
+## Default Facts
+
+ * `puppet_node` - Value from `node[:'nd-puppet'][:config][:puppet_node]`
+ * `puppet_environment` - Value from `node[:'nd-puppet'][:config][:puppet_environment]`
+
+## Custom Facts
+
+The `node[:'nd-puppet'][:config][:facts]` server input allows you to specify
+a set of key=value pairs (comma separated) that will be written out to the
+*/etc/facter/facts.d/nd-puppet.txt* file on separated lines. This allows you
+to write out any custom facts that your Puppet Manifests may need.
+
 # Recipes
 
 ## `nd-puppet::default`
