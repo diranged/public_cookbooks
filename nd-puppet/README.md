@@ -33,7 +33,14 @@ attributes which have inputs can be found in the metadata.rb file.
 
 ## Puppet configuration attributes
 
-* `node[:'nd-puppet'][:config][:facts]` - Array of custom key=value puppet facts.
+
+* `node[:'nd-puppet'][:config][:environment]` - Puppet Environment Name
+  (default: production)
+* `node[:'nd-puppet'][:config][:server]` - Puppet Server Hostname
+  (default: puppet)
+* `node[:'nd-puppet'][:config][:ca_server]` - Puppet Certificate Authority Server Hostname
+  (default: puppet)
+* `node[:'nd-puppet'][:config][:facts]` - Array of custom `key=value` puppet facts.
 * `node[:'nd-puppet'][:config][:puppet_node]` - The Puppet node name.
   (default: $hostname)
 * `node[:'nd-puppet'][:config][:node_name]` - Puppet Option: node\_name.
