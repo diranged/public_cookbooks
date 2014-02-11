@@ -60,7 +60,7 @@ facts passed into the `node[:'nd-puppet'][:config][:facts]` server input.
 ## Custom Facts
 
 The `node[:'nd-puppet'][:config][:facts]` server input allows you to specify
-a set of key=value pairs (comma separated) that will be written out to the
+a set of `key=value pairs` (comma separated) that will be written out to the
 */etc/facter/facts.d/nd-puppet.txt* file on separated lines. This allows you
 to write out any custom facts that your Puppet Manifests may need.
 
