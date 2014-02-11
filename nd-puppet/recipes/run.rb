@@ -17,9 +17,9 @@ execute "run puppet-agent" do
   command     "puppet agent -t --pluginsync " +
               " --allow_duplicate_certs" +
               " --config_file_name NON_EXISTANT_FILE" +
-              " --environment #{node[:'nd-puppet'][:run][:environment]} " +
-              " --ca_server #{node[:'nd-puppet'][:run][:ca_server]} " +
-              " --server #{node[:'nd-puppet'][:run][:server]} " +
+              " --environment #{node[:'nd-puppet'][:config][:environment]} " +
+              " --ca_server #{node[:'nd-puppet'][:config][:ca_server]} " +
+              " --server #{node[:'nd-puppet'][:config][:server]} " +
               " --node_name #{node[:'nd-puppet'][:config][:node_name]} " + 
               " --node_name_fact #{node[:'nd-puppet'][:config][:node_name_fact]}" +
               " --waitforcert #{node[:'nd-puppet'][:config][:waitforcert]}"

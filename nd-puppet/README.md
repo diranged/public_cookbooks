@@ -55,7 +55,8 @@ facts passed into the `node[:'nd-puppet'][:config][:facts]` server input.
 ## Default Facts
 
  * `puppet_node` - Value from `node[:'nd-puppet'][:config][:puppet_node]`
- * `puppet_environment` - Value from `node[:'nd-puppet'][:config][:puppet_environment]`
+ * `puppet_environment` - Value from `node[:'nd-puppet'][:config][:environment]`
+ * `puppet_server` - Value from `node[:'nd-puppet'][:config][:server]`
 
 ## Custom Facts
 

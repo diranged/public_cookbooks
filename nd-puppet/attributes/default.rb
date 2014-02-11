@@ -7,6 +7,9 @@
 default[:'nd-puppet'][:install][:version] = nil
 
 # Configurable Puppet configuration attributes
+default[:'nd-puppet'][:config][:environment] = 'production'
+default[:'nd-puppet'][:config][:server] = 'puppet'
+default[:'nd-puppet'][:config][:ca_server] = 'puppet'
 default[:'nd-puppet'][:config][:facts] = nil
 default[:'nd-puppet'][:config][:puppet_node] = node[:fqdn]
 default[:'nd-puppet'][:config][:node_name] = "facter"
@@ -30,6 +33,3 @@ default[:'nd-puppet'][:config][:state_files] = [
 # Puppet run attributes
 default[:'nd-puppet'][:run][:retries] = 5
 default[:'nd-puppet'][:run][:retry_delay] = 0
-default[:'nd-puppet'][:run][:environment] = 'production'
-default[:'nd-puppet'][:run][:server] = 'puppet'
-default[:'nd-puppet'][:run][:ca_server] = 'puppet'

@@ -98,30 +98,29 @@ attribute "nd-puppet/config/challenge_password",
   :category     => "Nextdoor: Puppet Settings",
   :recipes      => [ "nd-puppet::default", "nd-puppet::config" ]
 
-# Puppet Agent Run Attributes
-attribute "nd-puppet/run/ca_server",
+attribute "nd-puppet/config/ca_server",
   :display_name => "Puppet Certificate Authority Server Hostname",
   :description  =>
     "Puppet server to use for certificate requests.",
   :default      => "puppet",
   :required     => "recommended",
   :category     => "Nextdoor: Puppet Settings",
-  :recipes      => [ "nd-puppet::default", "nd-puppet::run" ]
+  :recipes      => [ "nd-puppet::default", "nd-puppet::config", "nd-puppet::run" ]
 
-attribute "nd-puppet/run/server",
+attribute "nd-puppet/config/server",
   :display_name => "Puppet Server Hostname",
   :description  =>
     "Puppet server to use for manifest compilation.",
   :default      => "puppet",
   :required     => "recommended",
   :category     => "Nextdoor: Puppet Settings",
-  :recipes      => [ "nd-puppet::default", "nd-puppet::run" ]
+  :recipes      => [ "nd-puppet::default", "nd-puppet::config", "nd-puppet::run" ]
 
-attribute "nd-puppet/run/environment",
+attribute "nd-puppet/config/environment",
   :display_name => "Puppet Environment Name",
   :description  =>
     "Puppet environment to request",
   :default      => "production",
   :required     => "recommended",
   :category     => "Nextdoor: Puppet Settings",
-  :recipes      => [ "nd-puppet::default", "nd-puppet::run" ]
+  :recipes      => [ "nd-puppet::default", "nd-puppet::config", "nd-puppet::run" ]
