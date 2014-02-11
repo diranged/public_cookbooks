@@ -1,0 +1,9 @@
+# This Facter file was installed by the nd-puppet::config cookbook.
+
+<% if @puppet_node %># The node_name passed to Puppet to define the node type
+puppet_node=<%= @puppet_node %>
+<% end %>
+
+<% if @facts %># Custom facts supplied from the rs-puppet::config::facts input
+<% @facts.each do |fact| %><%= fact %>
+<% end %><% end %>
