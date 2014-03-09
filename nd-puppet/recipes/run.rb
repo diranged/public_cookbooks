@@ -14,6 +14,9 @@ when "false"
   report="--no-report"
 end
 
+log "My hostname is ..."
+execute "hostname"
+
 # Repeatedly execute the 'puppet agent -t' command until the command
 # exits with a '0' exit code, or fails entirely.
 execute "run puppet-agent" do
